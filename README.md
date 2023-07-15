@@ -1,5 +1,9 @@
-# Blog Web Site
-
 git init
 git add README.md
-git commit
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/kubilayk5/frontendblog.git
+git push -u origin main
+
+
+git clone https://github.com/kubilayk5/frontendblog.git
