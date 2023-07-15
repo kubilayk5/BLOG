@@ -1,2 +1,5 @@
 # Blog Web Site
-''' sh
+
+git init
+git add README.md
+git commit
