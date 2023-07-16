@@ -1,6 +1,6 @@
 /*
 Project Name: Blog Project
-Project Author: Design and Codes Hamit Mızrak
+Project Author: Design and Codes Kubilay Kızılhan
 Version: V1
 Description: This is website , blog project
 */
@@ -138,24 +138,38 @@ p:hover {
     background-color: black;
     color: white;
     max-width: var(--max-width);
-    max-height: 30rem;
+    max-height: 5rem;
 }
 
-/* LEFT */
-.navbar_first_left li{
+.navbar_first_left{
+    float: left;
+}
+
+.navbar_first_right{
+    float: right;
+}
+
+/* LEFT & RIGHT  li */
+.navbar_first_left li, .navbar_first_right li{
     display: inline-block;
     margin-right: 0.5rem;
 }
 
-.navbar_first_left li a{
+/* LEFT & RIGHT a  */
+.navbar_first_left li a,.navbar_first_right li a{
     color:var(--template-color);
 }
 
-/* icon */
-.navbar_first_left li i{
-    font-size: 1rem;
+/*  LEFT & RIGHT icon */
+.navbar_first_left li i,.navbar_first_right li i{
+    font-size: 1.2rem;
     margin-right: .2rem;
-    color:var(--icon-color)
+    color:var(--icon-color);
+    
+}
+.navbar_first_left li i:hover,.navbar_first_right li i:hover{
+    transition: 2s all;
+    transform: rotate(360deg);
 }
 
 /* RIGHT */
@@ -164,21 +178,23 @@ p:hover {
 /**Navbar Second********************************************/
 
 
-
 /**********************************************************/
 /**Header**************************************************/
-
-
 
 
 /**********************************************************/
 /**Main****************************************************/
 
 
-
 /**********************************************************/
-/**Back To Top********************************************/
+/**Back To Top*********************************************/
 
 
 /**********************************************************/
 /**Footer**************************************************/
+
+/* 
+Register Login Modal
+Header 
+Footer 
+Main */
