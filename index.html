@@ -1,194 +1,537 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-    <title>Blog</title>
-    <!-- for Language -->
-    <meta charset="utf-8">
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!-- SEO -->
+	<meta name="keyword" content="html5, css3, bootstrap5, blog">
+	<meta name="author" content="Design by Hamit Mızrak">
+	<meta name="title" content="Blog Page ">
+	<meta name="keyword" content="html5, css3, bootstrap5, blog">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+		  integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+		  crossorigin="anonymous" referrerpolicy="no-referrer"/>
+	<!-- Bootstrap CSS v5.2.1 -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		  integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+	<!-- Jquery -->
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
 
-    <!-- Responsive Design -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- SEO -->
-    <meta name="keyword" content="html5, css3, bootstrap5, blog">
-    <meta name="author" content="Design by Hamit Mızrak">
-    <meta name="title" content="Blog Page ">
-    <meta name="keyword" content="html5, css3, bootstrap5, blog">
-
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap"
-        rel="stylesheet">
-
-    <!-- Font awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
-
-    <!-- Bootstrap CSS v5.2.1 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-
-    <!-- jquery UI -->
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
-
-    <!-- animate CSS-->
-    <!-- <link rel="stylesheet" href="css/animate.min.css"> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
-    <!-- wow js-->
-    <!-- <script src="js/wow.min.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <script> new WOW().init() </script>
-
-    <!--sweet alert-->
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-    <!-- external CSS -->
-    <link rel="stylesheet" href="style.css">
+	<!-- animate CSS-->
+	<!-- <link rel="stylesheet" href="css/animate.min.css"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+	<!-- My Styles	-->
+	<link rel="stylesheet" href="style.css">
+	<title>FB BLOG</title>
 </head>
+<body data-bs-spy="scroll" data-bs-target="#navbar_second">
+<!-- Navbar First strat -->
+<nav class="d-flex justify-content-around " id="navbar_first">
+	<div class="d-flex gap-3" id="navbar_first_left">
+		<span>
+			<i class="fa-solid fa-phone"></i>
+			<span>+90 111 22 33</span>
+		</span>
+		<span>
+			<i class="fa-solid fa-envelope"></i>
+			<span>kubilaykizilhan@gmail.com</span>
+		</span>
+		<span>
+			<i class="fa-solid fa-location-dot"></i>
+			<span>TURKEY</span>
+		</span>
+	</div>
+	<div class="d-flex gap-3" id="navbar_first_right">
+		<span>
+			<i class="fa-solid fa-right-to-bracket" data-bs-toggle="offcanvas" data-bs-target="#login"></i>
+		</span>
+		<span>
+			<i class="fa-solid fa-user-plus" data-bs-toggle="offcanvas" data-bs-target="#register"></i>
+		</span>
+	</div>
+</nav>
 
-<body data-bs-spy="scroll" data-bs-targe="#navbar_second">
+<!-- Navbar First end -->
+<!-- Login start -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="login">
+	<div class="offcanvas-header bg-dark text-white">
+		<h5>Login</h5>
+		<button type="button" class="btn btn-outline-danger" data-bs-dismiss="offcanvas" aria-label="Close">X</button>
+	</div>
+	<div class="offcanvas-body bg-dark text-white">
+		<form action="./index.html" method="post">
+			<div class="mb-3 row">
+				<label for="loginEmail" class="col-sm-2 col-form-label">Email</label>
+				<div class="col-sm-10">
+					<input type="email" class="form-control" id="loginEmail" placeholder="email@example.com">
+				</div>
+			</div>
+			<div class="mb-3 row">
+				<label for="loginPassword" class="col-sm-2 col-form-label">Password</label>
+				<div class="col-sm-10">
+					<input type="password" class="form-control" id="loginPassword" placeholder="*********">
+				</div>
+			</div>
+			<div class="mt-3 row">
+				<input type="reset" class="btn btn-danger col mx-1" value="Temizle">
+				<button type="submit" class="btn btn-primary col mx-1">Gönder</button>
+			</div>
+		</form>
+	</div>
+</div>
+<!-- Login end -->
+<!-- Register start -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="register">
+	<div class="offcanvas-header bg-dark text-white">
+		<h5>Register</h5>
+		<button type="button" class="btn btn-outline-danger" data-bs-dismiss="offcanvas" aria-label="Close">X</button>
+	</div>
+	<div class="offcanvas-body bg-dark text-white">
+		<form action="./index.html" method="post">
+			<div class="mb-3 row">
+				<label for="registerFirstName" class="col-sm-2 col-form-label">Name</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="registerFirstName" placeholder="John">
+				</div>
+			</div>
+			<div class="mb-3 row">
+				<label for="registerLastName" class="col-sm-2 col-form-label">Surame</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="registerLastName" placeholder="Doe">
+				</div>
+			</div>
+			<div class="mb-3 row">
+				<label for="registerEmail" class="col-sm-2 col-form-label">Email</label>
+				<div class="col-sm-10">
+					<input type="email" class="form-control" id="registerEmail" placeholder="email@example.com">
+				</div>
+			</div>
+			<div class="mb-3 row">
+				<label for="registerPassword" class="col-sm-2 col-form-label">Password</label>
+				<div class="col-sm-10">
+					<input type="password" class="form-control" id="registerPassword" placeholder="*********">
+				</div>
+			</div>
+			<div class="mt-3 row">
+				<input type="reset" class="btn btn-danger col mx-1" value="Temizle">
+				<button type="submit" class="btn btn-primary col mx-1">Gönder</button>
+			</div>
+		</form>
+	</div>
+</div>
+<!-- Register end -->
+<!-- Navbar Second start -->
+<nav id="navbar_second" class="navbar navbar-expand-md">
+	<div class="container">
+		<a class="navbar-brand" href="./index.html">
+			<div id="logo">
+				<span id="logo_letter_1">F</span>
+				<span id="logo_letter_2">B</span>
+				
+			</div>
+		</a>
+		<button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+				data-bs-target="#collapsible_navbar_second" aria-controls="collapsible_navbar_second"
+				aria-expanded="false"
+				aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="collapsible_navbar_second">
+			<ul class="navbar-nav me-auto mt-2 mt-lg-0 d-flex gap-2" id="center_items">
+				<li class="nav-item">
+					<a class="nav-link active" href="#header" aria-current="page"><i class="fa-solid fa-house"></i>
+						Home <span
+								class="visually-hidden">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#product"><i class="fa-brands fa-product-hunt"></i> Products</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#about_us"><i class="fa-solid fa-address-card"></i> About us</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#news"> <i class="fa-solid fa-newspaper"></i> News</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#blog"><i class="fa-brands fa-blogger"></i> Blog</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#lessons" id="dropdownId" data-bs-toggle="dropdown"
+					   aria-haspopup="true" aria-expanded="false"><i class="fa-solid fa-person-chalkboard"></i> Lessons</a>
+					<div class="dropdown-menu" aria-labelledby="dropdownId">
+						<a class="dropdown-item" href="#">Frontend</a>
+						<a class="dropdown-item" href="#">Backend</a>
+					</div>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#footer"> <i class="fa-solid fa-phone-volume"></i> Contact</a>
+				</li>
+			</ul>
+			<form class="d-flex my-2 my-lg-0">
+				<input class="form-control me-sm-2" id="search_id" type="text" placeholder="Search">
+				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+			</form>
+		</div>
+	</div>
+</nav>
+<!-- Navbar Second end -->
+<!-- Header start -->
+<header id="header">
+	<div class="text-light">
+		<div class="container">
+			<div class="text-center p-5 bg-dark" style="opacity:.8">
+				<h1 class="text-uppercase display-3 shadow">Welcome FB Web Development</h1>
+				<h4>Backend, Frontend, Database</h4>
+				<div class="d-flex justify-content-center gap-3">
+					<a href="https://www.youtube.com/channel/UCMSeuYgA44w3iTa38megcZA" class="btn btn-outline-danger"><i class="fa-brands fa-youtube"></i> Youtube</a>
+					<a href="https://www.linkedin.com/in/kubilaykizilhan/" class="btn btn-outline-primary"><i class="fa-brands fa-linkedin"></i> Linkedin</a>
+					<a href="" class="btn btn-outline-success"><i class="fa-brands fa-whatsapp"></i> Whatsapp</a>
+				</div>
+			</div>
 
-    <noscript>This that browser not working JS</noscript>
-    <!-- start codes -->
+		</div>
+	</div>
+</header>
+<!-- Header end -->
+<!-- Main start -->
+<main id="main">
+	<!-- Products start -->
+	<section id="product" class="container d-flex flex-column justify-content-center align-items-center">
+		<div class="product_card my-3 row text-center col-md-8">
+			<i class="fa-solid fa-code"></i>
+			<h2>Web Development</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores error iure molestias perferendis velit.
+				Accusamus at commodi dolorem error eum incidunt inventore ipsum labore magnam molestias necessitatibus,
+				nemo neque officia omnis placeat possimus quam quas qui recusandae sapiente temporibus vitae?</p>
+		</div>
+		<div class="product_card my-3 row text-center col-md-8">
+			<i class="fa-solid fa-database"></i>
+			<h2>Database Development</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores error iure molestias perferendis velit.
+				Accusamus at commodi dolorem error eum incidunt inventore ipsum labore magnam molestias necessitatibus,
+				nemo neque officia omnis placeat possimus quam quas qui recusandae sapiente temporibus vitae?</p>
+		</div>
+		<div class="product_card my-3 row text-center col-md-8">
+			<i class="fa-solid fa-display"></i>
+			<h2>Desktop Development</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores error iure molestias perferendis velit.
+				Accusamus at commodi dolorem error eum incidunt inventore ipsum labore magnam molestias necessitatibus,
+				nemo neque officia omnis placeat possimus quam quas qui recusandae sapiente temporibus vitae?</p>
+		</div>
+	</section>
+	<!-- Products end -->
+	<!-- About Me start -->
+	<section class="d-flex justify-content-center align-items-center mt-3" id="about_us">
+		<div class="bg-dark text-center text-white p-3">
+			<h2>About Us</h2>
+			<p class="line_clamp15">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi assumenda
+				consectetur cumque delectus, deserunt doloremque dolores ducimus ea eveniet fugiat, harum ipsam
+				laboriosam molestiae molestias natus neque nisi possimus praesentium provident quasi quia sed, sequi
+				suscipit tenetur vitae voluptatem. Animi autem consectetur, consequuntur dicta, enim ex facere illo
+				numquam odit possimus reprehenderit repudiandae sint. Aliquid eos in inventore libero natus nulla
+				provident quas quidem quis saepe sequi, sint! A amet at exercitationem inventore libero natus pariatur
+				ut. Autem blanditiis cum eaque hic optio perferendis, recusandae? Architecto, atque aut dolor dolore
+				dolorum ducimus ex laborum natus nesciunt perspiciatis quas quia quis saepe temporibus tenetur
+				voluptatem voluptates! Architecto assumenda debitis dolor dolorum earum, eveniet excepturi id ipsa
+				labore minima perferendis repellendus similique suscipit, totam veritatis. A autem, harum incidunt ipsum
+				magni minima quis quo recusandae repudiandae vero. Ipsam, minima, quis. Ab consectetur error hic ipsam
+				omnis pariatur ratione? Ad asperiores aspernatur at blanditiis commodi consequuntur, dicta distinctio
+				dolor ducimus ea error esse eveniet fuga ipsam itaque necessitatibus nostrum optio placeat provident,
+				quia quo ratione sunt tempora? Accusamus architecto assumenda corporis et exercitationem, facere fugit
+				harum hic iste maxime nostrum nulla numquam perferendis porro possimus quia reprehenderit sit soluta
+				sunt tempore, totam velit vero? Ad adipisci architecto assumenda, atque aut autem commodi culpa deserunt
+				dicta distinctio enim et exercitationem explicabo fuga impedit iste minus molestias nam non officia
+				praesentium quaerat quam quidem quis quisquam quod ratione reiciendis repellendus reprehenderit sed
+				similique soluta, tempore ullam velit veritatis vitae voluptate. Aperiam consequuntur doloremque esse
+				illum ipsam nam nulla pariatur. Id ipsa libero minima natus, quisquam repellendus velit! Debitis
+				distinctio, earum facilis iste laboriosam maiores obcaecati odio officia quidem velit? Accusamus aliquam
+				architecto at autem delectus dolorem, doloribus error ex fuga iste itaque, iusto magnam natus nesciunt
+				officia quas quidem rerum, saepe sed sequi soluta totam ut voluptates. Ab amet aut cupiditate
+				exercitationem impedit magni modi molestiae, mollitia nisi non, omnis quaerat quisquam quod similique
+				sit. A accusamus alias aspernatur assumenda atque autem consequatur cupiditate dolore dolorem dolorum
+				ducimus enim expedita hic impedit in mollitia nihil nostrum odio pariatur, perspiciatis porro
+				praesentium quae quam quas quidem quos reiciendis similique soluta temporibus voluptas! Atque
+				consequatur cum eaque facilis in incidunt molestiae quasi rem sed veritatis? At aut consectetur
+				consequatur et expedita, id iure, minima perspiciatis porro quidem totam voluptatum. Accusamus
+				accusantium dolore dolorem error inventore itaque modi molestiae nemo obcaecati pariatur porro
+				praesentium quae quibusdam quidem reiciendis saepe sint temporibus, veritatis. Aspernatur atque beatae
+				delectus ea eos harum illo ipsum iusto, laboriosam laborum laudantium non nostrum nulla officiis
+				provident quaerat qui quidem quis recusandae saepe sequi sit temporibus veritatis vero voluptates!
+				Aliquam animi architecto assumenda aut commodi consectetur, consequatur cum dolor dolores enim expedita
+				harum iste iusto, magni mollitia odit optio quaerat quas ratione rerum saepe sed sequi similique sit,
+				temporibus ullam veniam. Atque consequuntur, dolore est eum exercitationem fugiat hic ipsam iste
+				laboriosam magnam numquam optio, quaerat quia quod veniam! Animi aut cumque delectus facilis in iusto
+				mollitia obcaecati possimus quae repellat saepe voluptatem, voluptatum?</p>
+		</div>
+	</section>
+	<!-- About Me end -->
+	<!-- News Start -->
+	<section class="d-flex flex-column justify-content-cente align-items-center" id="news">
+		<div class="container text-center  col-md-9">
+			<h2>Fenerbahce History</h2>
+			<p class="line_clamp15">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo eaque sit quos
+				fugit perspiciatis sunt. Recusandae est et quo, laudantium corrupti quod, veniam illum voluptatibus
+				n! Commodi iste iure nulla accusantium ad omnis tenetur nam
+				saepe fugit!
+				Repellendus ex cupiditate excepturi, enim nesciunt unde vitae aliquid blanditiis dolorum mollitia
+				tenetur laboriosam dicta omnis beatae architecto quaerat animi, expedita fugit ipsa nulla? Similique
+				qui incidunt sapiente delectus voluptate.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quaerat harum non. Fuga esse
+				corporis pariatur vel ea dolorem eaque sunt facilis ratione consectetur praesentium eligendi, cum
+				neque quaerat laboriosam!
+				Beatae voluptate error, aut, perferendis magnam obcaecati blanditiis aperiam, labore sit quod illo
+				odio natus ducimus. Nihil nobis unde itaque iste maiores, corrupti aliquam, sit, qui quaerat culpa
+				dignissimos quasi.
+				Consectetur accusamus exercitationem ipsum, repudiandae iste, reprehenderit dolor sint sed soluta
+				est fugit? Quisquam fugit non iste eius animi modi sunt iure corporis optio vitae, ducimus error
+				ullam autem cupiditate!
+				Qui, laudantium deleniti magni maxime voluptas animi dolore nulla, quisquam, itaque dicta libero
+				dolor. Deleniti officia sequi sit voluptate autem vitae iusto aliquid nesciunt, eaque optio velit ab
+				incidunt praesentium.
+				Veniam fugit facere, obcaecati aliquid mollitia nobis natus nulla ex fuga! Officia debitis
+				obcaecati, animi itaque deleniti dolores sequi, assumenda vero enim eum suscipit amet, veritatis
+				atque cupiditate quisquam molestias!
+			</p>
+		</div>
+		<hr>
+		<div class="container text-center col-md-9">
+			<h2>ChatGPT is ALIVE!</h2>
+			<p class="line_clamp15">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo eaque sit quos
+				fugit perspiciatis sunt. Recusandae est et quo, laudantium corrupti quod, veniam illum voluptatibus
+				n! Commodi iste iure nulla accusantium ad omnis tenetur nam
+				saepe fugit!
+				Repellendus ex cupiditate excepturi, enim nesciunt unde vitae aliquid blanditiis dolorum mollitia
+				tenetur laboriosam dicta omnis beatae architecto quaerat animi, expedita fugit ipsa nulla? Similique
+				qui incidunt sapiente delectus voluptate.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quaerat harum non. Fuga esse
+				corporis pariatur vel ea dolorem eaque sunt facilis ratione consectetur praesentium eligendi, cum
+				neque quaerat laboriosam!
+				Beatae voluptate error, aut, perferendis magnam obcaecati blanditiis aperiam, labore sit quod illo
+				odio natus ducimus. Nihil nobis unde itaque iste maiores, corrupti aliquam, sit, qui quaerat culpa
+				dignissimos quasi.
+				Consectetur accusamus exercitationem ipsum, repudiandae iste, reprehenderit dolor sint sed soluta
+				est fugit? Quisquam fugit non iste eius animi modi sunt iure corporis optio vitae, ducimus error
+				ullam autem cupiditate!
+				Qui, laudantium deleniti magni maxime voluptas animi dolore nulla, quisquam, itaque dicta libero
+				dolor. Deleniti officia sequi sit voluptate autem vitae iusto aliquid nesciunt, eaque optio velit ab
+				incidunt praesentium.
+				Veniam fugit facere, obcaecati aliquid mollitia nobis natus nulla ex fuga! Officia debitis
+				obcaecati, animi itaque deleniti dolores sequi, assumenda vero enim eum suscipit amet, veritatis
+				atque cupiditate quisquam molestias!
+			</p>
+		</div>
+	</section>
+<!-- News end -->
+<!-- Blog start -->
+	<section id="blog">
+		<div class="container">
+			<div class="d-flex text-center row">
+				<h2 class="text-white">BLOGS</h2>
+				<div class="blog_card col-md-3 col-sm-12">
+					<a href="./detail_page.html">
+						<figure>
+							<img src="./img/tadic.webp" alt="blog_image">
+						</figure>
+						<h4>FB</h4>
+						<p class="line_clamp6">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium alias,
+							asperiores at
+							debitis dolore ex exercitationem fugiat id inventore laboriosam libero modi nemo nihil nisi
+							officia
+							quis, reiciendis sequi sint temporibus, vel vitae voluptates. Corporis cupiditate deleniti
+							ea et
+							ex
+							facilis illo in nostrum perspiciatis, ratione similique, voluptas voluptates.
+						</p>
+					</a>
+				</div>
+				<div class="blog_card col-md-3 col-sm-12">
+					<a href="./detail_page.html">
+						<figure>
+							<img src="./img/tadic.webp" alt="blog_image">
+						</figure>
+						<h4>FB</h4>
+						<p class="line_clamp6">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium alias,
+							asperiores at
+							debitis dolore ex exercitationem fugiat id inventore laboriosam libero modi nemo nihil nisi
+							officia
+							quis, reiciendis sequi sint temporibus, vel vitae voluptates. Corporis cupiditate deleniti
+							ea et
+							ex
+							facilis illo in nostrum perspiciatis, ratione similique, voluptas voluptates.
+						</p>
+					</a>
+				</div>
+				<div class="blog_card col-md-3 col-sm-12">
+					<a href="./detail_page.html">
+						<figure>
+							<img src="./img/tadic.webp" alt="blog_image">
+						</figure>
+						<h4>FB</h4>
+						<p class="line_clamp6">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium alias,
+							asperiores at
+							debitis dolore ex exercitationem fugiat id inventore laboriosam libero modi nemo nihil nisi
+							officia
+							quis, reiciendis sequi sint temporibus, vel vitae voluptates. Corporis cupiditate deleniti
+							ea et
+							ex
+							facilis illo in nostrum perspiciatis, ratione similique, voluptas voluptates.
+						</p>
+					</a>
+				</div>
+				<div class="blog_card col-md-3 col-sm-12">
+					<a href="./detail_page.html">
+						<figure>
+							<img src="./img/tadic.webp" alt="blog_image">
+						</figure>
+						<h4>FB</h4>
+						<p class="line_clamp6">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium alias,
+							asperiores at
+							debitis dolore ex exercitationem fugiat id inventore laboriosam libero modi nemo nihil nisi
+							officia
+							quis, reiciendis sequi sint temporibus, vel vitae voluptates. Corporis cupiditate deleniti
+							ea et
+							ex
+							facilis illo in nostrum perspiciatis, ratione similique, voluptas voluptates.
+						</p>
+					</a>
+				</div>
+				<div class="blog_card col-md-3 col-sm-12">
+					<a href="./detail_page.html">
+						<figure>
+							<img src="./img/tadic.webp" alt="blog_image">
+						</figure>
+						<h4>FB</h4>
+						<p class="line_clamp6">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium alias,
+							asperiores at
+							debitis dolore ex exercitationem fugiat id inventore laboriosam libero modi nemo nihil nisi
+							officia
+							quis, reiciendis sequi sint temporibus, vel vitae voluptates. Corporis cupiditate deleniti
+							ea et
+							ex
+							facilis illo in nostrum perspiciatis, ratione similique, voluptas voluptates.
+						</p>
+					</a>
+				</div>
+				<div class="blog_card col-md-3 col-sm-12">
+					<a href="./detail_page.html">
+						<figure>
+							<img src="./img/tadic.webp" alt="blog_image">
+						</figure>
+						<h4>FB</h4>
+						<p class="line_clamp6">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium alias,
+							asperiores at
+							debitis dolore ex exercitationem fugiat id inventore laboriosam libero modi nemo nihil nisi
+							officia
+							quis, reiciendis sequi sint temporibus, vel vitae voluptates. Corporis cupiditate deleniti
+							ea et
+							ex
+							facilis illo in nostrum perspiciatis, ratione similique, voluptas voluptates.
+						</p>
+					</a>
+				</div>
+				<div class="blog_card col-md-3 col-sm-12">
+					<a href="./detail_page.html">
+						<figure>
+							<img src="./img/tadic.webp" alt="blog_image">
+						</figure>
+						<h4>FB</h4>
+						<p class="line_clamp6">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium alias,
+							asperiores at
+							debitis dolore ex exercitationem fugiat id inventore laboriosam libero modi nemo nihil nisi
+							officia
+							quis, reiciendis sequi sint temporibus, vel vitae voluptates. Corporis cupiditate deleniti
+							ea et
+							ex
+							facilis illo in nostrum perspiciatis, ratione similique, voluptas voluptates.
+						</p>
+					</a>
+				</div>
+				<div class="blog_card col-md-3 col-sm-12">
+					<a href="./detail_page.html">
+						<figure>
+							<img src="./img/tadic.webp" alt="blog_image">
+						</figure>
+						<h4>FB</h4>
+						<p class="line_clamp6">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium alias,
+							asperiores at
+							debitis dolore ex exercitationem fugiat id inventore laboriosam libero modi nemo nihil nisi
+							officia
+							quis, reiciendis sequi sint temporibus, vel vitae voluptates. Corporis cupiditate deleniti
+							ea et
+							ex
+							facilis illo in nostrum perspiciatis, ratione similique, voluptas voluptates.
+						</p>
+					</a>
+				</div>
+	</section>
+<!-- Blog end -->
+</main>
+<!-- Main end -->
+<!-- Footer start-->
+<footer id="footer">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-9 bg-dark">
+				<iframe width="100%" height="440" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+						id="gmap_canvas"
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.7170516249407!2d29.034310012075238!3d40.98767622057301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab870784d1389%3A0x2bf4921764859e70!2zw5xsa2VyIEZlbmVyYmFow6dlIMWew7xrcsO8IFNhcmFjb8SfbHUgU3RhZHl1bXU!5e0!3m2!1str!2str!4v1690991704816!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"></iframe>
+			</div>
+			<div class="col-md-3 bg-dark text-white" id="contact">
+				<h4 class="text-center display-5">Contact Me</h4>
+				<form action="#!" method="post">
+					<div class="mb-3">
+						<label for="name_surname" class="form-label">Name And Surname</label>
+						<input type="email" class="form-control" id="name_surname"
+							   placeholder="Name Surname">
+					</div>
+					<div class="mb-3">
+						<label for="exampleFormControlInput1" class="form-label">Email address</label>
+						<input type="email" class="form-control" id="exampleFormControlInput1"
+							   placeholder="name@example.com">
+					</div>
+					<div class="mb-5">
+						<label for="message_id" class="form-label">Message</label>
+						<input type="text" class="form-control" id="message_id" name="message_id"
+							   placeholder="Enter your message">
+					</div>
 
-    <!-- NAVBAR FIRST Start Codes -->
-    <nav id="navbar_first" class="navbar">
-        <!-- LEFT -->
-        <ul class="navbar_first_left">
-            <li>
-                <i class="fa-solid fa-phone-volume"></i>
-                <a href="tel:+90 111 22 33">+90 111 22 33</a>
-            </li>
-            <li>
-                <i class="fa-regular fa-envelope"></i>
-                <a href="mailto:deneme@gmail.com">deneme@gmail.com</a>
-            </li>
-            <li>
-                <i class="fa-solid fa-location-dot"></i>
-                Turkey
-            </li>
-        </ul>
+					<div class="mb-3">
+						<input type="reset" class="btn btn-danger" value="Clean"/>
+						<button type="submit" class="btn btn-primary">Submit</button>
+					</div>
+				</form>
+			</div>
+			<div class="col-md-12 text-center bg-dark text-white" id="copy_right">2023-<span id="now_date"></span>
+				Design By: <a href="https://www.github.com/kubilayk5"> Kubilay Kızılhan</a> &copy; Bütün Haklar Saklıdır.
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- Footer end-->
+<!-- My Scripts -->
+<script src="template.js"></script>
 
-        <!-- RIGHT -->
-        <ul class="navbar_first_right">
-            <li>
-                <i class="fa-solid fa-right-to-bracket"></i>
-            </li>
-            <li>
-                <i class="fa-regular fa-id-card"></i>
-            </li>
-        </ul>
-    </nav>
-    <!-- NAVBAR End Codes -->
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+		integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+</script>
 
-    <!-- NAVBAR SECOND Start Codes -->
-    <nav id="navbar_second" class="navbar navbar-expand-md navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">Logo</a>
-            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="collapsibleNavId">
-                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#" aria-current="page">Home <span
-                                class="visually-hidden">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownId">
-                            <a class="dropdown-item" href="#">Action 1</a>
-                            <a class="dropdown-item" href="#">Action 2</a>
-                        </div>
-                    </li>
-                </ul>
-                <form class="d-flex my-2 my-lg-0">
-                    <input class="form-control me-sm-2" type="text" placeholder="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
-            </div>
-        </div>
-    </nav>
-    <!-- NAVBAR End Codes -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+		integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+</script>
 
-    <!-- HEADER Start Codes -->
-    <header id="header"></header>
-    <!-- HEADER Start Codes -->
-
-    <!-- MAIN Start Codes -->
-    <main id="main">
-        <i class="fa fa-address-card" aria-hidden="true"></i>
-        <h2 class="text-center tag_header">deneme deneme deneme</h2>
-        <img src="img/header1.jpg" alt="" srcset="">
-        <p class="line-clamp4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nostrum autem sapiente. Corporis facilis
-            deleniti, voluptatum dolorem quam, labore alias, nemo optio assumenda id maiores mollitia laudantium ducimus
-            magni molestias!
-            Modi iusto commodi eum doloremque corporis sapiente praesentium voluptatibus esse molestiae nostrum nulla
-            fugit, adipisci ex a consequuntur itaque! Doloribus, voluptatibus! Numquam illum autem ex quasi non
-            laboriosam? Deleniti, commodi.
-            A cumque sunt repellat! Quia temporibus eos sit veritatis, aspernatur nemo earum placeat provident ipsa?
-            Fugiat nulla recusandae quam ab commodi rem eligendi qui et, officia eveniet vel in labore.
-            Nemo rem fuga natus. Voluptates corrupti iste quis culpa, error, eveniet consectetur, quos cupiditate ab
-            porro voluptatem soluta nobis. Facilis odio quae voluptas obcaecati illum eaque numquam adipisci, nesciunt
-            qui.
-            Vitae veritatis, quod debitis necessitatibus quasi nesciunt dolorum in natus animi maxime reiciendis
-            quisquam quibusdam suscipit inventore rem ullam. Perspiciatis sint ipsam tempora eos voluptatibus blanditiis
-            laborum iusto necessitatibus animi!
-            Mollitia dolores odio recusandae. Optio tempore, numquam perferendis laudantium explicabo facilis incidunt
-            voluptas, repellendus cumque alias dolorem exercitationem ab repudiandae, beatae dignissimos commodi ut
-            fuga. Voluptates id modi assumenda ullam.
-            Nesciunt, voluptate? Aliquid at unde laborum dolores laboriosam ex doloribus inventore hic, nemo amet labore
-            ut in nesciunt quidem aliquam cum aut possimus nisi soluta dolor illum eligendi. Quae, quis.
-            Saepe reprehenderit labore commodi sint, quos ex tenetur inventore, illum alias odio illo pariatur neque
-            quaerat? Quia commodi beatae nobis? Magnam sapiente explicabo possimus doloremque? Dolor deserunt voluptatem
-            mollitia ut.
-            Cupiditate praesentium, aut illo rerum error dicta ex tenetur doloribus itaque animi? Corporis fugit animi
-            numquam maiores veritatis, eos nostrum veniam error sequi, consequuntur ullam, repellendus dolor culpa et
-            cupiditate.
-            Natus quibusdam facilis neque sed reiciendis eum impedit numquam accusantium fugiat ullam nemo mollitia
-            doloribus repudiandae, enim quidem tempora aliquid pariatur est quas vero, laudantium repellat, aliquam
-            ratione! Quod, distinctio.
-            Suscipit, beatae ipsa? At ullam cumque dolore! Ipsum pariatur, reprehenderit dolor, necessitatibus veniam
-            laudantium similique maxime nam amet possimus maiores suscipit deleniti! Mollitia ipsa possimus corporis
-            omnis quasi, nobis vel?
-            Tempore esse asperiores, numquam consequatur corporis optio doloremque repellat, harum voluptatibus ad enim
-            labore maxime laborum dolores molestias quisquam dolorem error, minus quia? Praesentium atque, assumenda
-            distinctio sit consequatur veniam!
-            Aut consequatur exercitationem eius porro commodi aliquam magni nam, eaque, nobis cupiditate natus
-            aspernatur expedita unde. Quisquam ipsa consequuntur rem saepe quibusdam eveniet, neque similique. Autem
-            omnis totam rerum magni?
-            Facere mollitia eum, cum, recusandae et dignissimos iure sequi odit minus, porro eos ab reiciendis! Suscipit
-            quasi saepe beatae reiciendis ratione ab, similique aliquam natus dolore ut corrupti delectus molestias!
-        </p>
-    </main>
-    <!-- MAIN Start Codes -->
-
-    <!-- FOOTER Start Codes -->
-    <footer id="footer"></footer>
-    <!-- FOOTER Start Codes -->
-
-    <!-- end codes -->
-    <!-- Bootstrap JavaScript Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-        </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
-        </script>
-
-    <!-- EXTERNAL JS -->
-    <script src="template.js"></script>
 </body>
-
 </html>

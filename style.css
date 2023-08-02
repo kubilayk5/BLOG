@@ -1,200 +1,349 @@
 /*
-Project Name: Blog Project
-Project Author: Design and Codes Kubilay Kızılhan
+Project Name: Blog
+Project Author: Design and Codes by Kubilay Kızılhan
 Version: V1
-Description: This is website , blog project
+Description: This is a blog site project
 */
 
+/* Font imports */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap');
+
+/* Common Property start */
 :root {
-    --template-bg: #000;
-    --template-color: #fff;
-    --max-width: 100%;
-    --primary: #0c7489;
-    --icon-color:rgb(19, 129, 240);
+    --mwd-black: #121212;
+    --mwd-orange: #ff9442;
+    --mwd-blue: #000c7a;
+    --mwd-white: #fdfdfd;
+    --mwd-gray: #f5f5f5;
+    --mwd-logo-font: 'Raleway', sans-serif;
 }
 
-/**********************************************************/
-/**Common Property ****************************************/
 * {
-    margin: 0px;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 html {
+    font-family: Cambria, sans-serif;
     font-size: 15px;
-    overflow-x: hidden;
+    background: var(--mwd-gray);
 }
 
-body {
-    position: relative;
-    font-family: 'Roboto Condensed', sans-serif;
-    line-height: 1.8;
-}
-
-ul {
-    list-style-type: none;
+h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
 }
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
-i {
-    font-size: 2rem;
-    opacity: .9;
+a:hover {
+    color: var(--mwd-blue);
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: .5rem;
-    border: 2px solid rgb(62, 62, 62);
-    /* https://www.cssmatic.com/box-shadow */
-    -webkit-box-shadow: 6px 7px 25px -6px rgba(0, 0, 0, 0.71);
-    -moz-box-shadow: 6px 7px 25px -6px rgba(0, 0, 0, 0.71);
-    box-shadow: 6px 7px 25px -6px rgba(0, 0, 0, 0.71);
-}
-
-img:hover {
-    opacity: .9;
-    transition: all 2s;
-    cursor: pointer;
-}
-
-p {
-    font-size: 1rem;
-    text-align: justify;
-    margin: 0.8rem 1rem;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 100;
-    font-style: italic;
-}
-
-p:hover {
-    background-color: var(--template-bg);
-    color: var(--template-color);
-    transition: all 3s;
-    padding: .5rem .4rem;
-}
-
-.my_clearfix::before {
-    content: "";
-    display: block;
-    clear: both;
-}
-
-.tag_header {
-    text-transform: uppercase;
-    text-decoration: underline;
-    text-shadow: 0.2px 0.2px rgba(0, 0, 0, .5);
-}
-
-.tag_header:hover {
-    transition: all 3s;
-    transform: rotate(360deg);
-}
-
-/**********************************************************/
-/**Line Clamp *********************************************/
-.line-clamp4 {
+/* Line Clamp */
+.line_clamp4 {
     display: -webkit-box;
     overflow: hidden;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
 }
 
-.line-clamp6 {
+.line_clamp6 {
     display: -webkit-box;
     overflow: hidden;
     -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
 }
 
-.line-clamp8 {
+.line_clamp8 {
     display: -webkit-box;
     overflow: hidden;
     -webkit-line-clamp: 8;
     -webkit-box-orient: vertical;
 }
 
-.line-clamp10 {
+.line_clamp10 {
     display: -webkit-box;
     overflow: hidden;
     -webkit-line-clamp: 10;
     -webkit-box-orient: vertical;
 }
 
-.line-clamp15 {
+.line_clamp15 {
     display: -webkit-box;
     overflow: hidden;
     -webkit-line-clamp: 15;
     -webkit-box-orient: vertical;
 }
 
-/**********************************************************/
-/**Navbar First********************************************/
-#navbar_first{
-    background-color: black;
-    color: white;
-    max-width: var(--max-width);
-    max-height: 5rem;
+.line_clamp30 {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 30;
+    -webkit-box-orient: vertical;
 }
 
-.navbar_first_left{
-    float: left;
+/* Common Property end */
+/* Navbar First start */
+#navbar_first {
+    background-color: var(--mwd-black);
+    color: var(--mwd-gray);
+    padding: 5px;
 }
 
-.navbar_first_right{
-    float: right;
+#navbar_first_left i, #navbar_first_right i {
+    margin-right: 2px;
 }
 
-/* LEFT & RIGHT  li */
-.navbar_first_left li, .navbar_first_right li{
-    display: inline-block;
-    margin-right: 0.5rem;
+#navbar_first_left span, #navbar_first_right span {
+    font-weight: 500;
 }
 
-/* LEFT & RIGHT a  */
-.navbar_first_left li a,.navbar_first_right li a{
-    color:var(--template-color);
-}
-
-/*  LEFT & RIGHT icon */
-.navbar_first_left li i,.navbar_first_right li i{
+#navbar_first_right i {
+    cursor: pointer;
     font-size: 1.2rem;
-    margin-right: .2rem;
-    color:var(--icon-color);
-    
-}
-.navbar_first_left li i:hover,.navbar_first_right li i:hover{
-    transition: 2s all;
-    transform: rotate(360deg);
+    transition: .2s all ease;
 }
 
-/* RIGHT */
+#navbar_first_right i:hover {
+    color: var(--mwd-blue);
+    transform: scale(1.2);
+}
 
-/**********************************************************/
-/**Navbar Second********************************************/
+/* Navbar First end */
+/* Offcanvas start */
+.offcanvas {
+    transition: all .5s linear;
+}
 
+/* Offcanvas end */
+/* Navbar Second start */
+#navbar_second {
+    background-color: var(--mwd-white);
+    border-bottom: 1px solid var(--mwd-gray);
+    position: sticky;
+    top: -1px;
+    z-index: 1;
+    box-shadow: 1px 1px 10px rgba(103, 103, 103, 0.65);
+}
 
-/**********************************************************/
-/**Header**************************************************/
+#navbar_second #logo {
+    font-family: var(--mwd-logo-font);
+    font-size: 2.5rem;
+    font-weight: bolder;
+    display: flex;
+    gap: 0;
+    user-select: none;
+}
 
+#navbar_second #logo span:first-child {
+    color: var(--mwd-black);
+}
 
-/**********************************************************/
-/**Main****************************************************/
+#navbar_second #logo span:nth-child(2) {
+    color: var(--mwd-orange);
+}
 
+#navbar_second #logo span:nth-child(3) {
+    color: var(--mwd-blue);
+}
 
-/**********************************************************/
-/**Back To Top*********************************************/
+#navbar_second #center_items a {
+    font-size: 1.1rem;
+    transition: .2s all ease;
+}
 
+#navbar_second #center_items a:hover {
+    color: var(--mwd-orange);
+    transform: scale(1.2);
+    text-shadow: 1px 1px 4px #ddd;
+    margin: 0 10px;
+}
 
-/**********************************************************/
-/**Footer**************************************************/
+#navbar_second #center_items a i {
+    margin-right: 2px;
+}
 
-/* 
-Register Login Modal
-Header 
-Footer 
-Main */
+/* Navbar Second end */
+/* Header start */
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./img/DkVvjHVXgAI5r_i.jpg');
+    background-size: cover;
+    z-index: -1;
+    height: 87.8vh;
+}
+
+/* Header end */
+/* Main start */
+/* Product start */
+#product {
+    margin-top: 5rem;
+}
+
+.product_card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*width: 50%;*/
+    height: min-content;
+    transition: all .2s ease;
+}
+
+.product_card:hover {
+    transform: scale(1.3);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: var(--mwd-blue);
+}
+
+.product_card i {
+    font-size: 7rem;
+}
+#message_id {
+    height: 100px;
+    text-align:left;
+    vertical-align:top;
+}
+
+/* Product end */
+/* About Us start */
+#about_us {
+    background-image: url("./img/fenerbahce-taraftarindan-dinamo-kiev-maci-oncesi-koreografi_10711351-2740_854x480.jpg");
+    background-size: cover;
+    height: 50rem;
+}
+
+#about_us .bg-dark {
+    width: 60%;
+    transition: .3s all ease;
+    opacity: .7;
+}
+
+#about_us .bg-dark:hover {
+    transform: scale(1.2);
+    opacity: .9;
+}
+
+/* About Us end */
+/* News start */
+#news {
+    height: 100%;
+    margin-top: 3rem;
+}
+
+#news .container {
+    /*width: 50%;*/
+    margin-bottom: 3rem;
+    border-bottom: 3px solid var(--mwd-gray);
+    transition: .2s all ease;
+}
+
+#news .container:hover {
+    transform: scale(1.2);
+}
+
+/* News end */
+
+/* Blog start */
+#blog {
+    padding: 2rem;
+    background-image: url("./img/background_2.jpg");
+}
+
+.blog_card {
+    max-width: 320px;
+    background-color: var(--mwd-white);
+    margin-right: .3rem;
+    margin-bottom: .3rem;
+    padding: .5rem;
+    cursor: pointer;
+    position: relative;
+    display: block;
+    transition: all .4s ease-in-out;
+    overflow: hidden;
+}
+
+.blog_card figure {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.blog_card figure img {
+    height: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.blog_card img {
+    max-width: 100%;
+    transform-origin: center;
+    transition: transform .2s ease-in-out;
+}
+
+.blog_card:hover img {
+    transform: scale(1.2);
+}
+
+#blog_detail{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+#blog_detail img {
+    max-width: 95%;
+    max-height: 75%;
+    border-radius: 25px;
+}
+
+#blog_detail h2 {
+    border-bottom: 1px solid var(--mwd-gray);
+    min-width: 80vw;
+}
+
+#blog_detail p {
+    text-align: justify;
+    font-family: "Times New Roman", Times, sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+/* Blog end */
+/* Main end */
+/* Footer start */
+#copy_right{
+    height: 5rem;
+    padding-top:2rem
+}
+/* Footer end */
+/* Media start */
+@media (max-width: 1200px) {
+    #navbar_second #center_items a {
+        font-size: .8rem;
+        font-weight: 400;
+    }
+
+    #about_us .bg-dark {
+        width: 70%;
+    }
+}
+
+@media (max-width: 766px) {
+    #navbar_second #center_items a {
+        font-size: 1.2rem;
+    }
+
+    #about_us .bg-dark {
+        width: 70%;
+    }
+}
+
+/* Media end */
